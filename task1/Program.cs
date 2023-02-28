@@ -11,17 +11,17 @@
 Random rnd = new Random();
 int[,] matrix = Generate2DArray(rnd.Next(3, 6), rnd.Next(3, 6));
 Print2DArray(matrix);
-OrganizeArray (matrix);
+OrganizeArray(matrix);
 System.Console.WriteLine();
 Print2DArray(matrix);
 
-void OrganizeArray (int [,] arr)
+void OrganizeArray(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-             for (int k = 0; k < arr.GetLength(1) - 1; k++)
+            for (int k = 0; k < arr.GetLength(1) - 1; k++)
             {
                 if (arr[i, k] < arr[i, k + 1])
                 {
@@ -34,14 +34,14 @@ void OrganizeArray (int [,] arr)
     }
 }
 
-int [,] Generate2DArray(int m, int n)
+int[,] Generate2DArray(int m, int n)
 {
-    int [,] result = new int [m, n];
+    int[,] result = new int[m, n];
     for (int i = 0; i < result.GetLength(0); i++)
     {
         for (int j = 0; j < result.GetLength(1); j++)
         {
-            result [i, j] = new Random().Next(1, 10);
+            result[i, j] = new Random().Next(1, 10);
         }
     }
     return result;
@@ -49,9 +49,9 @@ int [,] Generate2DArray(int m, int n)
 
 void Print2DArray(int[,] arr)
 {
-    for(int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for(int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
             System.Console.Write($"{arr[i, j]} ");
         }
