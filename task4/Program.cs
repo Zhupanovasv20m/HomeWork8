@@ -19,7 +19,7 @@ int[,,] Generate3DArray(int m, int n, int x)
         {
             for (int k = 0; k < array3D.GetLength(2); k++)
             {
-                array3D[i, j, k] = new Random().Next(1, 10);
+                array3D[i, j, k] = new Random().Next(10, 100);
             }
         }
     }
@@ -44,7 +44,7 @@ void WriteArray(int[,,] array3D)
 void CreateArray(int[,,] array3D)
 {
     int[] temp = new int[array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2)];
-    int number;
+    int number = 0;
     for (int i = 0; i < temp.GetLength(0); i++)
     {
         temp[i] = new Random().Next(10, 100);
