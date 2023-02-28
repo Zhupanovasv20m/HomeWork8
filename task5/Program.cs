@@ -7,27 +7,27 @@
 
 int m = 4;
 int n = 4;
-int[,] sqareMatrix = new int[m, n];
+int[,] spiralMatrix = new int[m, n];
 
 int temp = 1;
 int i = 0;
 int j = 0;
 
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+while (temp <= spiralMatrix.GetLength(0) * spiralMatrix.GetLength(1))
 {
-    sqareMatrix[i, j] = temp;
+    spiralMatrix[i, j] = temp;
     temp++;
-    if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
+    if (i <= j + 1 && i + j < spiralMatrix.GetLength(1) - 1)
         j++;
-    else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
+    else if (i < j && i + j >= spiralMatrix.GetLength(0) - 1)
         i++;
-    else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
+    else if (i >= j && i + j > spiralMatrix.GetLength(1) - 1)
         j--;
     else
         i--;
 }
 
-WriteArray(sqareMatrix);
+WriteArray(spiralMatrix);
 
 void WriteArray(int[,] array)
 {
