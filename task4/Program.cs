@@ -10,6 +10,7 @@ Random rnd = new Random();
 int[,,] array3D = Generate3DArray(rnd.Next(2, 2), rnd.Next(2, 2), rnd.Next(2, 2));
 WriteArray(array3D);
 CreateArray(array3D);
+
 int[,,] Generate3DArray(int m, int n, int x)
 {
     int[,,] array3D = new int[m, n, x];
